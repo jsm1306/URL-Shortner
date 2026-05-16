@@ -69,7 +69,7 @@ export default function LoginPage() {
       style={{
         height: "100vh",
         width: "100%",
-        background: "linear-gradient(135deg, #d9afd9 0%, #97d9e1 100%)",
+        background: "#eef2ff",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -81,17 +81,18 @@ export default function LoginPage() {
           padding="xl"
           radius="lg"
           style={{
-            backgroundColor: "rgba(255, 255, 255, 0.1)",
+            backgroundColor: "rgba(255, 255, 255, 0.95)",
             backdropFilter: "blur(10px)",
-            border: "1px solid rgba(255, 255, 255, 0.2)",
+            border: "1px solid rgba(148, 163, 184, 0.25)",
+            boxShadow: "0 12px 35px rgba(148, 163, 184, 0.2)",
             maxWidth: 400,
             width: "90%",
             textAlign: "center",
           }}
         >
-          <Text c="white" my="sm" size="lg">
+          <Text style={{ color: "#0f172a" }} my="sm" size="lg">
             Login to{" "}
-            <Text component="span" fw={700} c="white">
+            <Text component="span" fw={700} style={{ color: "#0f172a" }}>
               Being Zero 
             </Text>
           </Text>

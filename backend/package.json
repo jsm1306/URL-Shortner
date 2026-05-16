@@ -6,12 +6,14 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon src/app.js"
+    "start": "nodemon src/app.js",
+    "dev": "nodemon src/app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bz-mern-fullstack-app": "file:..",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
@@ -21,6 +23,7 @@
     "mongoose": "^8.15.1",
     "morgan": "^1.10.0",
     "nanoid": "^5.1.5",
-    "nodemon": "^3.1.10"
+    "nodemon": "^3.1.10",
+    "qrcode": "^1.5.4"
   }
 }

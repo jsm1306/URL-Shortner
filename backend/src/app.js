@@ -7,16 +7,15 @@ import morgan from "morgan"; // Import morgan
 import connectDB from "./db/dbConnect.js";
 import { config } from "./config.js";
 import authRouter from "./routes/authRouter.js";
+import shortURLRouter from "./routes/shortURLRouter.js";
 const app = express();
 
 // middlewares
 
 app.use(cors({
-  origin: [
-    'http://localhost:5173',
+  origin: [ 'http://localhost:5173',
     'http://127.0.0.1:5173',
-    'https://url-shortner-z06h.onrender.com',
-  ], // Allow deployed frontend origin too
+    'https://url-shortner-z06h.onrender.com'], // Be explicit
   credentials: true, // This is very often the fix for auth headers
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
@@ -34,6 +33,7 @@ connectDB();
 
 
 app.use("/api/auth", authRouter);
+app.use("/api/s", shortURLRouter);
 
 
 app.use(express.static(path.join(__dirname, "../../frontend/dist")));

@@ -9,11 +9,14 @@ class Service {
     this.domain = "";
     if (import.meta.env.VITE_BZENV === "development") {
       this.domain = import.meta.env.VITE_DEV_PROXY;
+    } else {
+      this.domain = import.meta.env.VITE_API_BASE_URL || "";
     }
   }
 
   async request(url, method = "POST", data) {
-    url = joinURL(this.domain, "api/" + url);
+    const baseURL = this.domain || window.location.origin;
+    url = joinURL(baseURL, "api/" + url);
 
     const res = await axios.request({
       url,

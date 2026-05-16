@@ -9,6 +9,7 @@ const shortURLSchema = new Schema(
     expiresAt: { type: Date, default: null },
     isActive: { type: Boolean, default: true },
     title: { type: String }, // Optional: fetched via metadata
+    qrCode: { type: String, default: null }, // Stores QR code as data URL
     utm: {
       source: String,
       medium: String,
