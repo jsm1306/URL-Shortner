@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home/Home';
 import LoginPage from './Pages/LoginPage/LoginPage';
 import ShortenUrl from './Pages/ShortenUrl/ShortenUrl';
-import MyUrls from './Pages/MyUrls/MyUrls';
+import MyUrls from './Pages/MyURLs/MyUrls';
 import Profile from './Components/Profile/Profile';
 import './index.css';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
